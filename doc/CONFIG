@@ -1,0 +1,36 @@
+= fail2ban-p2p.conf =
+
+Default location is /etc/fail2ban-p2p/fail2ban-p2p.conf.
+This file holds the information for your node. Following things must be configured:
+
+== Node ==
+
+{{{
+[Node]
+name=mynodename
+addresses=127.0.0.1,10.0.0.1
+port=1337
+ownermail=foo@bar.de
+bantime=7200
+threshold=80
+}}}
+
+ * name: Name of your Node, this is only used fpr informational purposes. In the
+ mesh the node is identified by its uid (hash of public key)
+ * addresses: A comma seperated list of listen addresses
+ * port: Listening port
+ * ownermail: Your email address (not used for now)
+ * bantime: how long in seconds fail2ban-p2p keeps banned hosts in its internal database
+ * threshold: Minimum trustlevel a ban for a host needs to take action (block it)
+
+== Logging ==
+
+{{{
+[Logging]
+logfile=/var/log/fail2ban-p2p.log
+loglevel=INFO
+}}}
+
+ * logfile: The file where fail2ban-p2p logs to
+ * loglevel: How verbose log output is, can be:
+   DEBUG, INFO, WARN, ERROR, BAN

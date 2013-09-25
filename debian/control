@@ -1,0 +1,19 @@
+Source: fail2ban-p2p
+Section: net
+Priority: optional
+Maintainer: Manuel Munz <manu@somakoma.de>
+Build-Depends: debhelper (>= 8.0.0), python (>= 2.5.4-1~)
+Build-Depends-Indep: python-central (>= 0.5.6)
+XS-Python-Version: current, >= 2.4
+Standards-Version: 3.9.2
+#Homepage: 
+#Vcs-Git: git://git.debian.org/collab-maint/fail2ban-p2p.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/fail2ban-p2p.git;a=summary
+
+Package: fail2ban-p2p
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python-m2crypto, python-argparse, adduser
+XB-Python-Version: ${python:Versions}
+Description: Distribute attacker information from fail2ban via a p2p network
+ Fail2ban-p2p can be used to distribute information about atackers in a
+ p2p/f2f network to ban these attackers on all hosts.

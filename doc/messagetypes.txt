@@ -1,0 +1,66 @@
+= Message Types for fail2ban-p2p =
+General: messages are sent as JSON
+
+== Type 1: Attack message ==
+Message that is send to notify friends about the IPs of attackers.
+
+{
+    "msg": {
+        "hops": [
+            "hop1",
+            "hop2"
+        ],
+        "msgType": 1,
+        "parameter": {
+            "AttackerIP": "1.2.3.4",
+            "Timestamp": "1363279754",
+            "Trustlevel": "80"
+        },
+        
+    },
+    "protocolVersion": 2
+    "signature": "foo"
+}
+
+The parameters AttackerIP and Timestamp are MANDATORY!
+
+== Type 2: Dumprequest / Direct output ==
+Message send to neighbors to request a dump of all known attackmessages
+for a given Timeframe. Will return a json encoded list of all banned ips.
+
+{
+    "msg": {
+        "hops": [
+            "local"
+        ],
+        "msgType": 2,
+        "parameter": {
+            "TimeFrame": "3600"
+        },
+    },
+    "protocolVersion": 2
+    "signature": "foo"
+}
+
+TimeFrame is mandatory.
+
+== Type 3: Dumprequest / Send normal ban messages to sender of this message ==
+Message send to friend to trigger sending ban messages for all ips in
+banlist for a given Timeframe. This can be used to pull banlists when a node
+is started up.
+
+{
+    "msg": {
+        "hops": [
+            "local"
+        ],
+        "msgType": 3,
+        "parameter": {
+            "TimeFrame": "3600"
+        },
+    },
+    "protocolVersion": 2
+    "signature": "foo"
+}
+
+TimeFrame is mandatory.

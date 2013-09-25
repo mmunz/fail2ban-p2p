@@ -1,0 +1,56 @@
+fail2ban-p2p (0.1.2) precise; urgency=low
+
+  * Better input filtering and error messages for invalid messages
+  * document classes and functions in code
+  * add sphinx for generating documentation
+  * reorder modules to resolve circular imports
+  * general cleanups
+  * client: fix an exception when the message received from the server was not valid json
+
+ -- Manuel Munz <manu@somakoma.de>  Fri, 24 May 2013 15:23:49 +0200
+
+fail2ban-p2p (0.1.1) precise; urgency=low
+
+  * 0.1.1 Fix problem with table dump in fail2ban-p2p-client
+
+ -- Manuel Munz <manu@somakoma.de>  Tue, 16 Apr 2013 18:00:24 +0200
+
+fail2ban-p2p (0.1.0) precise; urgency=low
+
+  * fix trustlevels handling
+  * pull banlists from friends when starting the node
+
+ -- Manuel Munz <manu@somakoma.de>  Thu, 11 Apr 2013 16:14:53 +0200
+
+fail2ban-p2p (0.0.5-1) oneiric; urgency=low
+
+  * Change in message protocol. Use JSON encoded messages now.
+  * Warning: This beraks compatibility with earlier versions.
+
+ -- Manuel Munz <manu@somakoma.de>  Thu, 21 Mar 2013 18:42:32 +0100
+
+fail2ban-p2p (0.0.4-1) oneiric; urgency=low
+
+  * removed dummy signature check, fixes crash when 'signature' was sent as signature
+  * fix permissions on private keyfile
+  * more log output
+
+ -- Manuel Munz <manu@somakoma.de>  Wed, 23 Jan 2013 16:07:55 +0100
+
+fail2ban-p2p (0.0.3-1) oneiric; urgency=low
+
+  * Update to 0.0.3
+
+ -- Manuel Munz <manu@somakoma.de>  Wed, 23 Jan 2013 15:53:43 +0100
+
+fail2ban-p2p (0.0.2-1) oneiric; urgency=low
+
+  * Update to 0.0.2
+
+ -- Manuel Munz <manu@somakoma.de>  Wed, 23 Jan 2013 15:53:30 +0100
+
+fail2ban-p2p (0.0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Manuel Munz <manu@somakoma.de>  Wed, 07 Nov 2012 16:40:08 +0100

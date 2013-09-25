@@ -1,0 +1,13 @@
+# Defaults for fail2ban-p2p initscript
+# sourced by /etc/init.d/fail2ban-p2p
+# installed at /etc/default/fail2ban-p2p by the maintainer scripts
+
+#
+# This is a POSIX shell fragment
+#
+
+# Additional options that are passed to the Daemon.
+DAEMON_OPTS=""
+
+# Set this to true to start the daemon at boot
+START_DAEMON=false
