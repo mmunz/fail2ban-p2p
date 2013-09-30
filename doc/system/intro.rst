@@ -8,7 +8,7 @@ fail2ban-p2p is a programm that can be used together with
 attackers using a p2p/f2f network.**  Like fail2ban it is written in
 python. fail2ban-p2p is in an **early stage of development**, please be
 prepared for bugs and if you find some, let us know (open a
-`ticket <https://svn.physik.uni-augsburg.de/projects/fail2ban-p2p/newticket>`_).
+`ticket <https://github.com/mmunz/fail2ban-p2p/issues>`_).
 
 Every node in a fail2ban-p2p network is connected to at least one other node
 ("friend"). When fail2ban detects an attacker it launches an action (e.g.
